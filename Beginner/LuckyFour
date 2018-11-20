@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+ class Codechef_1{
+public static void main(String[] args){
+Scanner s = new Scanner(System.in);
+Long t = s.nextLong();
+List<Long> result= new ArrayList<>(10000);
+for(int i=0;i<t;i++)
+{
+Long numbergiven= s.nextLong();
+Long count=0L;
+    while (numbergiven>0){
+    Long Remainder = numbergiven % 10;
+        if(Remainder==4L)
+        {
+            count++;
+        }
+    numbergiven = numbergiven/10;
+    }
+result.add(i, new Long (count));
+}
+for(int i=0;i<t;i++)
+{
+System.out.print(result.get(i));
+System.out.print(" ");
+
+}
+}
+}
